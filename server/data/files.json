@@ -1,0 +1,65 @@
+{
+    "files":[
+        {
+            "filename": "slack",
+            "size": 100,
+            "status":{
+                "status":"Status.Waiting",
+                "completed":0
+            },
+            "icon":"Icons.slack"
+        },
+        {
+            "filename": "facebook",
+            "size": 200,
+            "status":{
+                "status":"Status.Waiting",
+                "completed":0
+            },
+            "icon":"Icons.facebook"
+        },
+        {
+            "filename": "instagram",
+            "size": 150,
+            "status":{
+                "status":"Status.Waiting",
+                "completed":0
+            },
+            "icon":"Icons.instagram"
+        },
+        {
+            "filename": "discord",
+            "size": 450,
+            "status":{
+                "status":"Status.Waiting",
+                "completed":0
+            },
+            "icon":"Icons.discord"
+        },
+        {
+            "filename": "x",
+            "size": 550,
+            "status":{
+                "status":"Status.Waiting",
+                "completed":0
+            },
+            "icon":"Icons.discord"
+        },
+        {
+            "filename": "test file1",
+            "size": 200,
+            "status":{
+                "status":"Status.Complete",
+                "completed":100
+            }
+        },
+        {
+            "filename": "test file2",
+            "size": 150,
+            "status":{
+                "status":"Status.Updating",
+                "completed":0
+            }
+        }
+    ]
+}
