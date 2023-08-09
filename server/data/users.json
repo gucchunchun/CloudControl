@@ -1,0 +1,73 @@
+{
+  "user": [
+    {
+      "id": "admin",
+      "pwd": "admin",
+      "data": {
+        "name": {
+          "first": "admin",
+          "middle": "",
+          "last": "minmin"
+        },
+        "email": "admin@gmail.com",
+        "phone": "",
+        "birthday": {
+          "year": 2023,
+          "month": 8,
+          "day": 8
+        },
+        "country": "",
+        "address": "",
+        "gender": "",
+        "updatedFiles": [
+          "test file1",
+          "test file2"
+        ]
+      }
+    },
+    {
+      "id": "empty",
+      "pwd": "empty",
+      "data": {
+        "name": {
+          "first": "empty",
+          "middle": "",
+          "last": "dumpty"
+        },
+        "email": "empty@gmail.com",
+        "phone": "",
+        "birthday": {
+          "year": 2023,
+          "month": 8,
+          "day": 8
+        },
+        "country": "",
+        "address": "",
+        "gender": "",
+        "updatedFiles": []
+      }
+    },
+    {
+      "id": "indra",
+      "pwd": "haha",
+      "data": {
+        "name": {
+          "first": null,
+          "middle": null,
+          "last": null
+        },
+        "email": null,
+        "phone": null,
+        "birthday": {
+          "year": null,
+          "month": null,
+          "day": null
+        },
+        "country": null,
+        "address": null,
+        "gender": null,
+        "updatedFiles": []
+      }
+    }
+  ]
+}

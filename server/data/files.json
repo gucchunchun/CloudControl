@@ -51,7 +51,8 @@
             "status":{
                 "status":"Status.Complete",
                 "completed":100
-            }
+            },
+            "icon":""
         },
         {
             "filename": "test file2",
@@ -59,7 +60,8 @@
             "status":{
                 "status":"Status.Updating",
                 "completed":0
-            }
+            },
+            "icon":""
         }
     ]
 }
