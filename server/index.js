@@ -24,11 +24,6 @@ app.listen(PORT, () => {
 // Have Node serve the files for our built React app
 app.use(express.static(path.join(__dirname, '../download-status2/build')));
 
-// All other GET requests not handled before will return our React app
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '..C/download-status2/build', 'index.html'));
-});
-
 //Login system
 app.post('/api/login', (req, res) => {
     const { id, pwd } = req.body;
@@ -56,7 +51,7 @@ app.post('/api/signup', (req, res) => {
     if (userIndex === -1) {
         add_user(id, pwd, jsonData)
           .then((x) => {
-            res.json({ message: x }); // Respond with JSON success message
+            res.json({ message: x, token: jsonData.length(), user: jsonData.user[userIndex][jsonData.length()] }); // Respond with JSON success message
           })
           .catch((err) => {
             res.status(401).json({ message: err }); // Respond with JSON error message
@@ -68,6 +63,18 @@ app.post('/api/signup', (req, res) => {
 
 // get Files data
 app.get('/api/files', (req, res) => {
-    const jsonData = JSON.parse(fs.readFileSync(usersDataFile));
+    const jsonData = JSON.parse(fs.readFileSync(addFilesDataFile));
     res.json({ files: jsonData.files });
+});
+
+// save updated user data
+app.post('/api/save', (req, res) => {
+    const { userData, userDataIndex } = req.body;
+    change_userData(userData, userDataIndex)
+    .then((x) =>{
+        res.json({ message: x});
+    })
+    .catch((err) => {
+        res.status(401).json({ message: err });
+    });
 });
