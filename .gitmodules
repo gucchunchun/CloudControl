@@ -1,6 +1,3 @@
-[submodule "app"]
-	path = app
-	url = ./app
 [submodule "download-status"]
 	path = download-status
 	url = https://github.com/gucchunchun/download-status.git
