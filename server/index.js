@@ -22,7 +22,7 @@ app.listen(PORT, () => {
 });
 
 // Have Node serve the files for our built React app
-app.use(express.static(path.join(__dirname, '../download-status2/build')));
+app.use(express.static(path.join(__dirname, '../download-status/build')));
 
 //Login system
 app.post('/api/login', (req, res) => {

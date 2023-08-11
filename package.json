@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server/index.js",
-    "build": "cd download-status2 && npm run build"
+    "build": "cd download-status && npm run build"
   },
   "keywords": [],
   "author": "",
