@@ -51,12 +51,14 @@ app.post('/api/signUp', (req, res) => {
     if (userIndex === -1) {
         add_user(id, pwd, jsonData)
           .then((x) => {
-            res.json({ message: x, token: jsonData.length(), user: jsonData.user[userIndex][jsonData.length()] }); // Respond with JSON success message
+            res.json({ message: x, token: jsonData.user.length, user: jsonData.user[userIndex] }); // Respond with JSON success message
           })
           .catch((err) => {
+            console.log(err);
             res.status(401).json({ message: err }); // Respond with JSON error message
           });
     } else {
+        console.log(err);
         res.status(401).json({ message: 'This ID is already used' }); // Respond with JSON error message
     }
 });
