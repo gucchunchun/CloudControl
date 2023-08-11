@@ -34,7 +34,7 @@ app.post('/api/login', (req, res) => {
         res.status(401).json({ message: 'Invalid ID' });
     }else {
         if(jsonData.user[userIndex].pwd === pwd) {
-            res.json({ message: 'Login successful', token: userIndex, user: jsonData.user[userIndex]});
+            res.json({ message: 'Login successful. Hello ' + id, token: userIndex, user: jsonData.user[userIndex]});
         }else {
             res.status(401).json({ message: 'Invalid credentials' });
         }
@@ -42,7 +42,7 @@ app.post('/api/login', (req, res) => {
 });
 
 // Signup system
-app.post('/api/signup', (req, res) => {
+app.post('/api/signUp', (req, res) => {
     const { id, pwd } = req.body;
   
     const jsonData = JSON.parse(fs.readFileSync(usersDataFile));
