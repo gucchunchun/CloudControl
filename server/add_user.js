@@ -38,7 +38,7 @@ module.exports = async function add_user(id, pwd, jsonData = null) {
         fs.writeFileSync(usersDataFile, JSON.stringify(parsedData, null, 2));
 
         console.log('JSON file has been updated.');
-        return "Sign up complete";
+        return "Sign up complete. Welcome " + id;
     } catch (error) {
         console.error('Error adding user:', error.message);
         throw new Error('An error occurred while adding the user.');
