@@ -58,7 +58,6 @@ app.post('/api/signUp', (req, res) => {
             res.status(401).json({ message: err }); // Respond with JSON error message
           });
     } else {
-        console.log(err);
         res.status(401).json({ message: 'This ID is already used' }); // Respond with JSON error message
     }
 });
