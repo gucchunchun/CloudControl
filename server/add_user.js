@@ -31,6 +31,7 @@ module.exports = async function add_user(id, pwd, jsonData = null) {
                 country: null,
                 address: null,
                 gender: null,
+                avatar: null,
                 updatedFiles: [],
             },
         });
