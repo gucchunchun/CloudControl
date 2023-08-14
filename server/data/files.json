@@ -4,64 +4,62 @@
             "filename": "slack",
             "size": 100,
             "status":{
-                "status":"Status.Waiting",
+                "status":"waiting",
                 "completed":0
             },
-            "icon":"Icons.slack"
+            "icon":"/img/slack.png"
         },
         {
             "filename": "facebook",
             "size": 200,
             "status":{
-                "status":"Status.Waiting",
+                "status":"waiting",
                 "completed":0
             },
-            "icon":"Icons.facebook"
+            "icon":"/img/facebook.png"
         },
         {
             "filename": "instagram",
             "size": 150,
             "status":{
-                "status":"Status.Waiting",
+                "status":"waiting",
                 "completed":0
             },
-            "icon":"Icons.instagram"
+            "icon":"/img/instagram.png"
         },
         {
             "filename": "discord",
             "size": 450,
             "status":{
-                "status":"Status.Waiting",
+                "status":"waiting",
                 "completed":0
             },
-            "icon":"Icons.discord"
+            "icon":"/img/discord.png"
         },
         {
             "filename": "x",
             "size": 550,
             "status":{
-                "status":"Status.Waiting",
+                "status":"waiting",
                 "completed":0
             },
-            "icon":"Icons.discord"
+            "icon":"/img/x.png"
         },
         {
             "filename": "test file1",
             "size": 200,
             "status":{
-                "status":"Status.Complete",
+                "status":"up to date",
                 "completed":100
-            },
-            "icon":""
+            }
         },
         {
             "filename": "test file2",
             "size": 150,
             "status":{
-                "status":"Status.Updating",
+                "status":"pausing updating",
                 "completed":0
-            },
-            "icon":""
+            }
         }
     ]
 }
