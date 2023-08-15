@@ -5,9 +5,9 @@
       "pwd": "admin",
       "data": {
         "name": {
-          "first": "admin",
+          "first": "first",
           "middle": "",
-          "last": "minmin"
+          "last": "last"
         },
         "email": "admin@gmail.com",
         "phone": "",
