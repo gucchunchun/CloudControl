@@ -2,10 +2,15 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const fs = require('fs');
+const multer = require('multer');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
 app.use(bodyParser.json());
+const upload = multer({ 
+    dest: 'uploads/',
+    limits: { fileSize: 5 * 1024 * 1024 }, 
+ });
 
 const usersDataFile = path.join(__dirname, 'data', 'users.json');
 const addFilesDataFile = path.join(__dirname, 'data', 'files.json');
@@ -73,7 +78,6 @@ app.post('/api/save', (req, res) => {
     console.log('req'+req.body);
     const { new_userData, dataIndex } = req.body;
 
-    console.log( new_userData );
     change_userData(new_userData, dataIndex)
     .then((x) =>{
         res.json({ message: x});
@@ -81,4 +85,30 @@ app.post('/api/save', (req, res) => {
     .catch((err) => {
         res.status(401).json({ message: err });
     });
+});
+
+// get user avatar data
+app.get('/api/avatar/:filename', (req, res) => {
+    const filename = req.params.filename;
+    console.log(filename);
+    const imagePath = path.join(__dirname, 'data', 'img', filename);
+
+    // Send the image file as a response
+    res.sendFile(imagePath);
+});
+
+// Handle image upload
+app.post('/api/upload', upload.single('file'), (req, res) => {
+    if (!req.file) {
+        return res.status(400).json({ message: 'No file uploaded' });
+    }
+    const { originalname, filename } = req.file;
+    const userId = req.body.userId; // Get the user ID from the request body
+
+    const newFilename = `${userId}Avatar${path.extname(originalname)}`;
+    const imagePath = path.join(__dirname, 'data', 'img', newFilename);
+
+    fs.renameSync(req.file.path, imagePath); // Rename and move the uploaded file
+
+    res.json({ message: 'Image uploaded successfully' });
 });

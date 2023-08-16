@@ -12,17 +12,17 @@
         "email": "admin@gmail.com",
         "phone": "",
         "birthday": {
-          "year": 2023,
-          "month": 8,
-          "day": 8
+          "year": 2001,
+          "month": 1,
+          "day": 24
         },
         "country": "",
         "address": "",
-        "gender": "",
-        "avatar": "./data/img/adminAvatar.png",
+        "gender": "female",
+        "avatar": "/api/avatar/adminAvatar.png",
         "updatedFiles": [
-          "test file1",
-          "test file2"
+          "instagram",
+          "test file1"
         ]
       }
     },
@@ -45,7 +45,7 @@
         "country": "",
         "address": "",
         "gender": "",
-        "avatar": "",
+        "avatar": null,
         "updatedFiles": []
       }
     },
