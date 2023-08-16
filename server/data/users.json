@@ -6,7 +6,7 @@
       "data": {
         "name": {
           "first": "first",
-          "middle": "",
+          "middle": "middle",
           "last": "last"
         },
         "email": "admin@gmail.com",

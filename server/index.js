@@ -70,8 +70,11 @@ app.get('/api/files', (req, res) => {
 
 // save updated user data
 app.post('/api/save', (req, res) => {
-    const { userData, userDataIndex } = req.body;
-    change_userData(userData, userDataIndex)
+    console.log('req'+req.body);
+    const { new_userData, dataIndex } = req.body;
+
+    console.log( new_userData );
+    change_userData(new_userData, dataIndex)
     .then((x) =>{
         res.json({ message: x});
     })

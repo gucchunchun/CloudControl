@@ -11,9 +11,8 @@ module.exports = async function change_userData(new_userData, userIndex = null, 
         } else {
             parsedData = jsonData;
         }
-
         let indexToModify = userIndex;
-        if (!indexToModify) {
+        if (indexToModify===null) {
             indexToModify = parsedData.user.findIndex(user => user.id === new_userData.id);
             if (indexToModify === -1) {
                 return "Can not find user";
