@@ -19,8 +19,17 @@
         "country": "",
         "address": "",
         "gender": "female",
-        "avatar": "/api/avatar/adminAvatar.png",
+        "avatar": {
+          "url": "/api/avatar/adminAvatar.png",
+          "position": {
+            "x": "50.765625px",
+            "y": "34px",
+            "translate": "-66% -46%",
+            "scale": "1.4400000000000004"
+          }
+        },
         "updatedFiles": [
+          "slack",
           "instagram",
           "test file1"
         ]
@@ -45,7 +54,15 @@
         "country": "",
         "address": "",
         "gender": "",
-        "avatar": null,
+        "avatar": {
+          "url": "/api/avatar/emptyAvatar.png",
+          "position": {
+            "x": "",
+            "y": "",
+            "translate": "",
+            "scale": ""
+          }
+        },
         "updatedFiles": []
       }
     },
@@ -68,7 +85,15 @@
         "country": null,
         "address": null,
         "gender": null,
-        "avatar": "",
+        "avatar": {
+          "url": "",
+          "position": {
+            "x": "",
+            "y": "",
+            "translate": "",
+            "scale": ""
+          }
+        },
         "updatedFiles": []
       }
     }

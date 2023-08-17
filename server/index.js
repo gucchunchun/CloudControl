@@ -75,7 +75,6 @@ app.get('/api/files', (req, res) => {
 
 // save updated user data
 app.post('/api/save', (req, res) => {
-    console.log('req'+req.body);
     const { new_userData, dataIndex } = req.body;
 
     change_userData(new_userData, dataIndex)
@@ -90,7 +89,6 @@ app.post('/api/save', (req, res) => {
 // get user avatar data
 app.get('/api/avatar/:filename', (req, res) => {
     const filename = req.params.filename;
-    console.log(filename);
     const imagePath = path.join(__dirname, 'data', 'img', filename);
 
     // Send the image file as a response
@@ -110,5 +108,5 @@ app.post('/api/upload', upload.single('file'), (req, res) => {
 
     fs.renameSync(req.file.path, imagePath); // Rename and move the uploaded file
 
-    res.json({ message: 'Image uploaded successfully' });
+    res.json({ message: 'Image uploaded successfully', path:'/api/avatar/'+newFilename });
 });
